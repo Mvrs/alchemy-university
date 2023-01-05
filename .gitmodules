@@ -1,6 +1,3 @@
 [submodule "week-1/ecdsa-node"]
 	path = week-1/ecdsa-node
-	url = https://github.com/alchemyplatform/ecdsa-node.git
-[submodule "week-1/week-1/ecdsa-node"]
-	path = week-1/week-1/ecdsa-node
 	url = https://github.com/Mvrs/ecdsa-node.git
