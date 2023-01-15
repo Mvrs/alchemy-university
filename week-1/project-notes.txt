@@ -1,0 +1,31 @@
+The user experience 
+
+Pass in a signature rather than a wallet address
+
+But, you might feel in the wallet address
+
+We might want to get a public, so they can send some funds, and they control it
+because they control the private-key
+
+We can trim the public key to the last 20 bytes similar to ethereum
+
+The idea is to implement signatures (which gives us security)
+
+We need to sign some of intention from the client that will be sent to the server
+
+Once they recover that public key from the client, the server decodes it and validates it based on the public key
+
+
+1. First thing 
+ a. Make input field a wallet address (public key or signature)
+  i. signature is more secure, so a website can't get a hold of your private-key
+  ii. you're doing the signing outside the client application
+
+
+2. Add the ability to put a private key as a prop for Wallet Component
+3. Transfer Component we eventually take the private key prop to generate a signed transaction 
+    so the server can take the signature and derive the address from the person who sent the message
+
+server.js
+4. send a sign transaction to the server and server should recover the public key from that signature
+  and only allows the transfer to go through if it has a valid public key that actualy has those funds
